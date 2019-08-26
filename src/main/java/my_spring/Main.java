@@ -8,7 +8,10 @@ public class Main {
 
 //        ApplicationContext context = new ApplicationContext(new JavaConfig("my_spring"));
 //        context.getBean(IRobot.class).cleanRoom();
-        IRobot iRobot = ObjectFactory.getInstance().createObject(IRobot.class);
-        iRobot.cleanRoom();
+//        IRobot iRobot = ObjectFactory.getInstance().createObject(IRobot.class);
+//        iRobot.cleanRoom();
+        Worker worker = ObjectFactory.getInstance().createObject(Worker.class);
+        worker.work();
+        worker.drinkBeer();
     }
 }
