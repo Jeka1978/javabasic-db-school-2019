@@ -1,5 +1,7 @@
 package my_spring;
 
+import org.springframework.context.annotation.ComponentScan;
+
 /**
  * @author Evgeny Borisov
  */
