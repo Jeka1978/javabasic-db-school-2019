@@ -13,7 +13,7 @@ import java.util.Arrays;
 /**
  * @author Evgeny Borisov
  */
-@Component
+//@Component
 public class BeanDefinitionAnalyzerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     @SneakyThrows

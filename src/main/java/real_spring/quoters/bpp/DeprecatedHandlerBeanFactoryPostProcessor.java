@@ -11,7 +11,7 @@ import real_spring.quoters.DeprecatedClass;
 /**
  * @author Evgeny Borisov
  */
-@Component
+//@Component
 public class DeprecatedHandlerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     @SneakyThrows
