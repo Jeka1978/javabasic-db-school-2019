@@ -1,6 +1,5 @@
 package real_spring.how_to_refresh_prototype_in_singleton;
 
-import design_patterns.strategy.heroes.RandomUtil;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.*;
 
@@ -17,19 +16,11 @@ import static design_patterns.strategy.heroes.RandomUtil.getRandomInRange;
 public class MainConf {
 
 
-
     @Bean
-    @Scope("prototype")
-    public Color color(){
+    @Scope(value = "prototype",proxyMode = ScopedProxyMode.TARGET_CLASS)
+    public Color color() {
         return new Color(getRandomInRange(0, 255), getRandomInRange(0, 255), getRandomInRange(0, 255));
     }
-
-
-
-
-
-
-
 
 
     @SneakyThrows
