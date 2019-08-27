@@ -3,14 +3,17 @@ package real_spring.quoters;
 import lombok.Data;
 import my_spring.InjectRandomInt;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Evgeny Borisov
  */
-@Data
+@Component
 public class ShakespeareQuoter implements Quoter {
     @InjectRandomInt(min = 3, max = 5)
     private int repeat;
+    @Value("${shake}")
     private String message;
 
     @Override
