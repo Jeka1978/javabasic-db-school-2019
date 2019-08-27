@@ -12,7 +12,7 @@ import java.lang.management.ManagementFactory;
  */
 @Data
 public class BenchmarkToggle implements BenchmarkToggleMBean{
-    private boolean enabled;
+    private boolean enabled = true;
 
     @SneakyThrows
     public BenchmarkToggle() {

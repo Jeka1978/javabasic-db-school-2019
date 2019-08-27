@@ -1,5 +1,6 @@
 package real_spring;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import my_spring.Speaker;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,13 +10,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 @Data
 public class Soldier {
-    private int age;
+    private String name;
+    private String family;
 
-    public void setAge(String age) {
-        System.out.println(age);
+    public Soldier(String имя, String фамилия) {
+       name = имя;
+       family = фамилия;
     }
 
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+    public void printMe() {
+        System.out.println(this);
     }
 }
