@@ -1,6 +1,9 @@
 package real_spring.quoters.business;
 
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 import real_spring.quoters.Book;
 
@@ -13,12 +16,13 @@ import java.util.List;
 @Data
 @Component
 public class TalkingRobotImpl implements TalkingRobot {
-    @Book
+    @Autowired
     private List<Quoter> quoters;
 
 
     @Override
-    @PostConstruct
+    @EventListener(ContextRefreshedEvent.class)
+    @Secured
     public void talk() {
         quoters.forEach(Quoter::sayQuote);
     }
