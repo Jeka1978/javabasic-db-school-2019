@@ -22,11 +22,6 @@ import static java.util.stream.Collectors.toMap;
 public class Config {
 
 
-    @Bean
-    public Map<Integer,MailGenerator> map(List<MailGenerator> generators){
-        return generators.stream().collect(toMap(MailGenerator::mailCode, identity()));
-    }
-
 
 
 

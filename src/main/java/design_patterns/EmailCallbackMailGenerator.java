@@ -17,4 +17,6 @@ public class EmailCallbackMailGenerator implements MailGenerator {
     public int mailCode() {
         return 2;
     }
+
+
 }

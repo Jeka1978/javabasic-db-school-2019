@@ -19,11 +19,17 @@ import static java.util.stream.Collectors.toMap;
  */
 @Service
 public class DistributionService {
-    @Autowired
-    private Map<Integer, MailGenerator> map;
+    private Map<Integer, MailGenerator> map = new HashMap<>();
 
     @Autowired
     private MailDao mailDao;
+
+    public void register(int mailCode, MailGenerator mailGenerator) {
+        if (map.containsKey(mailCode)) {
+            throw new IllegalStateException(mailCode + " already in use");
+        }
+        map.put(mailCode, mailGenerator);
+    }
 
     @Scheduled(fixedDelay = 500)
     public void sendMail() {
