@@ -9,9 +9,8 @@ import java.util.Random;
  */
 @Repository
 public class MailDao {
-    private static Random random = new Random();
-
+   private static Random random = new Random();
     public int getMailCode() {
-        return random.nextInt(3) + 1;
+        return random.nextInt(4)+1;
     }
 }

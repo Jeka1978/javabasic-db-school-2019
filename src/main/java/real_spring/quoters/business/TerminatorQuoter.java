@@ -1,20 +1,9 @@
-package real_spring.quoters;
+package real_spring.quoters.business;
 
-import lombok.Data;
 import my_spring.Benchmark;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+import real_spring.quoters.Film;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,6 +1,4 @@
-package real_spring.quoters;
-
-import org.springframework.stereotype.Service;
+package real_spring.quoters.business;
 
 /**
  * @author Evgeny Borisov

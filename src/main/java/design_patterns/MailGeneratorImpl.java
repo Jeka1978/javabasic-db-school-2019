@@ -5,12 +5,10 @@ import org.springframework.stereotype.Component;
 /**
  * @author Evgeny Borisov
  */
-@Component("2")
-public class EmailCallbackMailGenerator implements MailGenerator {
+@Component("3")
+public class MailGeneratorImpl implements MailGenerator {
     @Override
     public String generateMail() {
-        //20 lines of code
-        return "<HTML> don't call us Nikolas</HTML>";
+        return "Используйте Спринг!";
     }
-
 }

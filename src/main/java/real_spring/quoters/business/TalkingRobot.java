@@ -1,4 +1,4 @@
-package real_spring.quoters;
+package real_spring.quoters.business;
 
 /**
  * @author Evgeny Borisov
