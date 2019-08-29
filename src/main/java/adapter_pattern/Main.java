@@ -11,9 +11,19 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
         ProductRepo productRepo = new ProductRepo();
-        List<Costable> costables = Stream.generate(productRepo::getProduct)
-                .limit(20).collect(Collectors.toList());
+        List<Priceable> costables = Stream.generate(productRepo::getProduct)
+                .limit(20)
+                .map(costable -> (Priceable) costable::getCost)
+//                .map(Costable2PriceableAdapter::new)
+                .collect(Collectors.toList());
         PriceCalc priceCalc = new PriceCalc();
-//        priceCalc.total(costables)
+        System.out.println(priceCalc.total(costables));
     }
 }
+
+
+
+
+
+
+

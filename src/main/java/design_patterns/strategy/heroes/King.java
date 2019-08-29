@@ -21,6 +21,7 @@ public class King extends Hero {
 
     @Override
     public void kick(Hero enemy) {
+
         weapon.kick(this,enemy);
     }
 }
